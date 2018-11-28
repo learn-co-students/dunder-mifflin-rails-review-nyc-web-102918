@@ -1,0 +1,9 @@
+<h1>Particular DOGE!</h1>
+
+NAME: <%= @dog.name %><br>
+BREED:<%= @dog.breed %><br>
+AGE:<%= @dog.age %><br>
+EMPLOYEES:
+<% @dog.employees.each do |employee| %>
+<%= employee.to_s  %><br>
+<% end %>

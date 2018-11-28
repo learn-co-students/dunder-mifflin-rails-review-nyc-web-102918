@@ -1,0 +1,7 @@
+<h1>Index for Da Employees!</h1>
+
+<% @employees.each do |employee| %>
+<%= link_to employee.to_s, employee_path(employee) %><br>
+<%= button_to('Edit', employee_path(employee),method: "edit") %>
+<%= button_to('Destroy', employee_path(employee),method: "delete", data: { confirm: 'Are you sure?', disable_with: 'loading...' }) %>
+<% end %>
