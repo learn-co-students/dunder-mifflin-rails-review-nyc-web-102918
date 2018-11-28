@@ -12,7 +12,7 @@
   <%= f.label :office %>
   <%= f.text_field :office %>
   <%= f.label :dog %>
-  <%= f.collection_select :dog_id, Dog.all, :id, :name, prompt: true %>
+  <%= f.collection_select :dog_id, @dogs, :id, :name, prompt: true %>
   <%= f.label :img_url %>
   <%= f.text_field :img_url %>
   <%= f.submit %>
