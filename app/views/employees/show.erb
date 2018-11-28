@@ -1,0 +1,10 @@
+<h1><%= @employee.full_name %></h1>
+<img src="<%= @employee.img_url %>" alt="<%= @employee.alias %>"><br>
+<p>Alias: <%= @employee.alias %></p>
+<p>Title: <%= @employee.title %></p>
+<p>Office: <%= @employee.office %></p>
+<% if @employee.dog %>
+  <p>Dog: <%= @employee.dog.name %></p>
+<% end %>
+<%= button_to 'Edit', {action: 'edit', id: @employee.id}, method: :get %>
+<%= button_to 'Delete', {action: 'destroy', id: @employee.id}, method: :delete, data: {confirm: 'Are you sure????'} %>
