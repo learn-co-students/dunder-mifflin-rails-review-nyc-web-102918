@@ -1,0 +1,11 @@
+<h1>DOGE SHOW PAGE</h1>
+
+<h2><%= @dog.name %> </h2>
+<p><%= @dog.breed %></p>
+<p><%= @dog.age %></p>
+
+Employees:<% @dog.employees.each do |employee| %>
+<p><%= employee.to_s %> </p>
+<% end %>
+
+<%# The Dog show page should have their name, breed, age and the list of Dunder Mifflin Employees they are connected to %>

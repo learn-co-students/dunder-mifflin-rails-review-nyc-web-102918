@@ -1,0 +1,12 @@
+<h1>Index page for DOGES</h1>
+
+<% @dogs.each do |dog| %>
+<%= link_to dog.name, dog_path(dog) %><br>
+<%= button_to('Edit', dog_path(dog),method: "edit") %>
+<%= button_to('Destroy', dog_path(dog),method: "delete", data: { confirm: 'Are you sure?', disable_with: 'loading...' }) %>
+<% end  %>
+
+
+
+
+<%# For our index page for Dogs, a user should be able to click on a specific dog and take them to the corresponding show page. %>
