@@ -6,11 +6,12 @@ class EmployeesController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def new
     @employee = Employee.new
+    @dogs = Dog.all
   end
 
   def create
@@ -23,6 +24,7 @@ class EmployeesController < ApplicationController
   end
 
   def edit
+    @dogs = Dog.all
   end
 
   def update
